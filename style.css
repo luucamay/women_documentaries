@@ -1,7 +1,24 @@
-li {
-  color: navy;
-  font-size: 18px;
+#doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+.card {
+  border: 1px solid #4682b4;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f0f8ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 h1 {
   text-align: center;
+  color: #2f4f4f;
+}
+button {
+  margin: 5px;
+  padding: 10px;
+  background: #4682b4;
+  color: white;
+  border: none;
 }
