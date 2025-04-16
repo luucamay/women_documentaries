@@ -5,6 +5,7 @@ const documentaries = [
 ];
 
 function renderDocs(docs) {
+  console.log(docs)
   document.getElementById("doc-grid").innerHTML = docs
     .map(doc => `
       <div class="card">
