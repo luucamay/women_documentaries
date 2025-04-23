@@ -1,5 +1,5 @@
 import { filterData, sortData } from '../src/data.js';
-import { filmsDummyData, sortedFilmsByYearRelease } from './dummyData.js'
+import { filmsDummyData, sortedFilmsByYearReleaseAsc, sortedFilmsByYearReleaseDesc } from './dummyData.js'
 
 describe('filterData', () => {
   it('is a function', () => {
@@ -24,7 +24,11 @@ describe('sortFilms', () => {
   });
 
   it('returns `${sortedFilms}` year_of_release ascending', () => {
-    expect(sortData(filmsDummyData, 'year_of_release', 'asc')).toEqual(sortedFilmsByYearRelease);
+    expect(sortData(filmsDummyData, 'year_of_release', 'asc')).toEqual(sortedFilmsByYearReleaseAsc);
+  });
+
+  it('returns `${sortedFilms}` year_of_release descending', () => {
+    expect(sortData(filmsDummyData, 'year_of_release', 'desc')).toEqual(sortedFilmsByYearReleaseDesc);
   });
   /*
   SORT BY
