@@ -1,23 +1,38 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterData, sortData } from '../src/data.js';
+import { filmsDummyData, sortedFilmsByYearRelease } from './dummyData.js'
 
-
-describe('example', () => {
+describe('filterData', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterData).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+  /*
+  FILTER BY
+  year_of_release
+  original_language
+  genre
+
+  it('returns `filterData`', () => {
+    expect(filterData()).toBe('example');
+  });*/
 });
 
 
-describe('anotherExample', () => {
+describe('sortFilms', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof sortData).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `${sortedFilms}` year_of_release ascending', () => {
+    expect(sortData(filmsDummyData, 'year_of_release', 'asc')).toEqual(sortedFilmsByYearRelease);
   });
+  /*
+  SORT BY
+  year_of_release
+  rating
+  alphabetically
+
+    it('returns `anotherExample`', () => {
+      expect(anotherExample()).toBe('OMG');
+    });*/
 });
